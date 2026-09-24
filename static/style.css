@@ -76,3 +76,17 @@ button {
 button:hover {
     background-color: #333;
 }
+
+.delete-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background-color: #B33A3A;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.delete-button:hover {
+    background-color: #8F2E2E;
+}

@@ -45,7 +45,8 @@ def add():
             "id": new_id,
             "author": author,
             "title": title,
-            "content": content
+            "content": content,
+            "likes": 0
         }
 
         blog_posts.append(new_post)
@@ -85,6 +86,19 @@ def delete(post_id):
     for post in blog_posts:
         if post["id"] == post_id:
             blog_posts.remove(post)
+            break
+
+    save_posts(blog_posts)
+
+    return redirect(url_for("index"))
+
+@app.route("/like/<int:post_id>")
+def like(post_id):
+    blog_posts = load_posts()
+
+    for post in blog_posts:
+        if post["id"] == post_id:
+            post["likes"] += 1
             break
 
     save_posts(blog_posts)

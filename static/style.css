@@ -26,6 +26,8 @@ h1 {
     margin: 10px 0;
 }
 
+/* Forms */
+
 form {
     max-width: 600px;
     margin: 40px auto;
@@ -77,6 +79,9 @@ button:hover {
     background-color: #333;
 }
 
+/* Post action buttons */
+
+.like-button,
 .edit-button,
 .delete-button {
     display: inline-block;
@@ -87,8 +92,20 @@ button:hover {
     border-radius: 6px;
 }
 
+.like-button,
 .edit-button {
     margin-right: 8px;
+}
+
+.like-button {
+    background-color: #6A5ACD;
+}
+
+.like-button:hover {
+    background-color: #5748B5;
+}
+
+.edit-button {
     background-color: #4F6D7A;
 }
 
@@ -103,6 +120,8 @@ button:hover {
 .delete-button:hover {
     background-color: #8F2E2E;
 }
+
+/* Add post button */
 
 .add-post-container {
     text-align: center;

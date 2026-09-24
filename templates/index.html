@@ -22,6 +22,7 @@
             <p><em>Written by {{ post.author }}</em></p>
             <p>{{ post.content }}</p>
 
+            <a class="like-button" href="{{ url_for('like', post_id=post.id) }}">Like ({{ post.likes }})</a>
             <a class="edit-button" href="{{ url_for('update', post_id=post.id) }}">Edit</a>
             <a class="delete-button" href="{{ url_for('delete', post_id=post.id) }}">Delete</a>
         </div>

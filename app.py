@@ -1,5 +1,5 @@
 import json
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -10,9 +10,10 @@ def load_posts():
 
 
 @app.route("/")
-def hello_world():
-    posts = load_posts()
-    return posts
+def index():
+    blog_posts = load_posts()
+
+    return render_template("index.html", posts=blog_posts)
 
 
 if __name__ == "__main__":

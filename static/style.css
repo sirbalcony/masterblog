@@ -121,6 +121,37 @@ button:hover {
     background-color: #8F2E2E;
 }
 
+/* Post action forms */
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.post-actions form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    max-width: none;
+}
+
+.post-actions button {
+    width: auto;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.post-actions .like-button,
+.post-actions .edit-button,
+.post-actions .delete-button {
+    margin: 0;
+}
+
 /* Add post button */
 
 .add-post-container {

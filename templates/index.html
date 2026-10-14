@@ -22,9 +22,23 @@
             <p><em>Written by {{ post.author }}</em></p>
             <p>{{ post.content }}</p>
 
-            <a class="like-button" href="{{ url_for('like', post_id=post.id) }}">Like ({{ post.likes }})</a>
-            <a class="edit-button" href="{{ url_for('update', post_id=post.id) }}">Edit</a>
-            <a class="delete-button" href="{{ url_for('delete', post_id=post.id) }}">Delete</a>
+            <div class="post-actions">
+                <form action="{{ url_for('like', post_id=post.id) }}" method="POST">
+                    <button type="submit" class="like-button">
+                        Like ({{ post.get('likes', 0) }})
+                    </button>
+                </form>
+
+                <a class="edit-button" href="{{ url_for('update', post_id=post.id) }}">
+                    Edit
+                </a>
+
+                <form action="{{ url_for('delete', post_id=post.id) }}" method="POST">
+                    <button type="submit" class="delete-button">
+                        Delete
+                    </button>
+                </form>
+            </div>
         </div>
     {% endfor %}
 
